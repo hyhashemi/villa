@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/article_base">
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/up">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/article_pic"
+            android:scaleType="centerCrop"
+            app:layout_aspectRatio="100%"
+            app:layout_widthPercent="100%"
+            android:padding="@dimen/padding_m"
+            />
+
+
+            <com.apnozhan.villa.views.inheritedViews.PersianTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/article_title"
+                android:layout_gravity="start"
+                android:gravity="start"
+                android:padding="@dimen/padding_m"
+                android:layout_margin="@dimen/padding_m"
+                android:textColor="@color/color_white"
+                android:layout_alignTop="@+id/article_pic"
+                android:layout_alignBottom="@+id/article_pic"
+                android:textSize="20sp"
+                >
+
+            </com.apnozhan.villa.views.inheritedViews.PersianTextView>
+
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignBottom="@+id/up"
+        android:layout_alignTop="@+id/up"
+        android:background="@drawable/boarder"
+        >
+
+    </View>
+</RelativeLayout>
